@@ -1,14 +1,5 @@
 function calculateFactorial(n) {
-  if (n < 0) {
-    return NaN;
-  }
-
-  let factorial = 1;
-  for (let i = 2; i <= n; i += 1) {
-    factorial *= i;
-  }
-
-  return factorial;
+  return n === 0 || n === 1?1:n * calculateFactorial(n - 1)
 }
 
 console.log(calculateFactorial(5));
